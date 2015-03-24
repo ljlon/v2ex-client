@@ -6,3 +6,19 @@
 2015-03-24 10:45:44.515 v2ex-client[6039:333912] [CDVTimer][TotalPluginStartup] 0.225008ms
 2015-03-24 10:45:44.882 v2ex-client[6039:333912] Resetting plugins due to page load.
 2015-03-24 10:45:45.115 v2ex-client[6039:333912] Finished load of: file:///Users/liujinlong/Library/Developer/CoreSimulator/Devices/03759A9D-B332-43DE-8064-D6800C1E91FC/data/Containers/Bundle/Application/8BEDA2DF-6160-4CF2-A43D-BB61427976E9/v2ex-client.app/www/index.html#/tab/dash
+2015-03-24 20:07:31.735 v2ex-client[14542:1121731] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/liujinlong/Library/Developer/CoreSimulator/Devices/03759A9D-B332-43DE-8064-D6800C1E91FC/data/Containers/Data/Application/9F724926-049B-40A8-830A-32F4696256AA/Library/Cookies/Cookies.binarycookies
+2015-03-24 20:07:32.124 v2ex-client[14542:1121731] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-24 20:07:32.125 v2ex-client[14542:1121731] Multi-tasking -> Device: YES, App: YES
+2015-03-24 20:07:32.143 v2ex-client[14542:1121731] Unlimited access to network resources
+2015-03-24 20:07:32.707 v2ex-client[14542:1121731] [CDVTimer][keyboard] 0.066996ms
+2015-03-24 20:07:32.707 v2ex-client[14542:1121731] [CDVTimer][TotalPluginStartup] 0.234008ms
+2015-03-24 20:07:33.000 v2ex-client[14542:1121731] Resetting plugins due to page load.
+2015-03-24 20:07:33.429 v2ex-client[14542:1121731] Finished load of: file:///Users/liujinlong/Library/Developer/CoreSimulator/Devices/03759A9D-B332-43DE-8064-D6800C1E91FC/data/Containers/Bundle/Application/F5E36870-2D97-4289-88D4-D73765FA483F/v2ex-client.app/www/index.html#/tab/dash
+2015-03-24 21:26:19.194 v2ex-client[24362:1229583] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/liujinlong/Library/Developer/CoreSimulator/Devices/03759A9D-B332-43DE-8064-D6800C1E91FC/data/Containers/Data/Application/000B3C5A-757C-4494-964C-32C040740F7A/Library/Cookies/Cookies.binarycookies
+2015-03-24 21:26:19.537 v2ex-client[24362:1229583] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-24 21:26:19.538 v2ex-client[24362:1229583] Multi-tasking -> Device: YES, App: YES
+2015-03-24 21:26:19.559 v2ex-client[24362:1229583] Unlimited access to network resources
+2015-03-24 21:26:19.978 v2ex-client[24362:1229583] [CDVTimer][keyboard] 0.069022ms
+2015-03-24 21:26:19.978 v2ex-client[24362:1229583] [CDVTimer][TotalPluginStartup] 0.696003ms
+2015-03-24 21:26:20.206 v2ex-client[24362:1229583] Resetting plugins due to page load.
+2015-03-24 21:26:20.484 v2ex-client[24362:1229583] Finished load of: file:///Users/liujinlong/Library/Developer/CoreSimulator/Devices/03759A9D-B332-43DE-8064-D6800C1E91FC/data/Containers/Bundle/Application/13DA7AFE-69B3-4C6E-AB5D-45E2B0B024E6/v2ex-client.app/www/index.html#/tab/dash
