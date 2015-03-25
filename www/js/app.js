@@ -42,37 +42,55 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         url: '/all',
         views: {
             'tab-all': {
-                templateUrl: 'templates/tab-all.html',
+                templateUrl: 'templates/tab-topics.html',
                 controller: 'AllCtrl'
+            }
+        }
+    })
+    .state('tab.topic-all', {
+        url: '/topic-all/:topicId',
+        views: {
+            'tab-all': {
+                templateUrl: 'templates/topic-detail.html',
+                controller: 'TopicDetailCtrl'
             }
         }
     })
 
     .state('tab.hot', {
-            url: '/hot',
-            views: {
-                'tab-hot': {
-                    templateUrl: 'templates/tab-hot.html',
-                    controller: 'HotCtrl'
-                }
-            }
-        })
-        .state('tab.chat-detail', {
-            url: '/chats/:chatId',
-            views: {
-                'tab-chats': {
-                    templateUrl: 'templates/chat-detail.html',
-                    controller: 'ChatDetailCtrl'
-                }
-            }
-        })
-
-    .state('tab.tec', {
-        url: '/tec',
+        url: '/hot',
         views: {
-            'tab-tec': {
-                templateUrl: 'templates/tab-tec.html',
-                controller: 'TecCtrl'
+            'tab-hot': {
+                templateUrl: 'templates/tab-topics.html',
+                controller: 'HotCtrl'
+            }
+        }
+    })
+    .state('tab.topic-hot', {
+        url: '/topic-hot/:topicId',
+        views: {
+            'tab-hot': {
+                templateUrl: 'templates/topic-detail.html',
+                controller: 'TopicDetailCtrl'
+            }
+        }
+    })
+
+    .state('tab.tech', {
+        url: '/tech',
+        views: {
+            'tab-tech': {
+                templateUrl: 'templates/tab-topics.html',
+                controller: 'TechCtrl'
+            }
+        }
+    })
+    .state('tab.topic-tech', {
+        url: '/topic-tech/:topicId',
+        views: {
+            'tab-tech': {
+                templateUrl: 'templates/topic-detail.html',
+                controller: 'TopicDetailCtrl'
             }
         }
     });
