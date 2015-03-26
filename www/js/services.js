@@ -1,6 +1,8 @@
 angular.module('starter.services', [])
 
-.factory('Topics', function($http) {
+.constant('V2exApiUrl', 'https://www.v2ex.com')
+
+.factory('Topics', function($http, V2exApiUrl) {
     // Might use a resource here that returns a JSON array
 
     // Some fake testing data
@@ -8,7 +10,7 @@ angular.module('starter.services', [])
 
     return {
         latest: function() {
-            return $http.get('/api/topics/latest.json').then(function(resp) {
+            return $http.get(V2exApiUrl + '/api/topics/latest.json').then(function(resp) {
                         topics = resp['data'];
                         console.log(JSON.stringify(resp));
                         return topics;
@@ -18,7 +20,7 @@ angular.module('starter.services', [])
                     });
         },
         hot: function() {
-            return $http.get('/api/topics/hot.json').then(function(resp) {
+            return $http.get(V2exApiUrl + '/api/topics/hot.json').then(function(resp) {
                         topics = resp['data'];
                         console.log(JSON.stringify(resp));
                         return topics;
@@ -28,7 +30,7 @@ angular.module('starter.services', [])
                     });
         },
         tech: function() {
-            return $http.get('/api/topics/show.json?node_name=tech').then(function(resp) {
+            return $http.get(V2exApiUrl + '/api/topics/show.json?node_name=tech').then(function(resp) {
                         topics = resp['data'];
                         console.log(JSON.stringify(resp));
                         return topics;
@@ -38,7 +40,7 @@ angular.module('starter.services', [])
                     });
         },
         detail: function(topicId) {
-            return $http.get('/api/topics/show.json?id='+topicId).then(function(resp) {
+            return $http.get(V2exApiUrl + '/api/topics/show.json?id='+topicId).then(function(resp) {
                         console.log(JSON.stringify(resp));
                         return resp['data'][0];
                     }, function(err) {

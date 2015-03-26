@@ -2,9 +2,9 @@
     "name": "v2ex-client",
     "app_id": "eb9cb768",
     "proxies": [
-            {
-                "path": "/api",
-                "proxyUrl": "https://www.v2ex.com/api"
-            }
-        ]
+        {
+            "path": "/api",
+            "proxyUrl": "https://www.v2ex.com/api"
+        }
+    ]
 }
