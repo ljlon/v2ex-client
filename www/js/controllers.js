@@ -11,7 +11,7 @@ angular.module('starter.controllers', [])
 .controller('HotCtrl', function($scope, Topics) {
     $scope.title = '热门';
     $scope.route = 'topic-hot';
-    Topics.latest().then(function(topics){
+    Topics.hot().then(function(topics){
         $scope.topics = topics;
     });
 })
@@ -25,7 +25,7 @@ angular.module('starter.controllers', [])
 .controller('TechCtrl', function($scope, Topics) {
     $scope.title = '技术';
     $scope.route = 'topic-tech';
-    Topics.latest().then(function(topics){
+    Topics.tech().then(function(topics){
         $scope.topics = topics;
     });
 });
