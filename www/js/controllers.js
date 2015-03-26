@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('AllCtrl', function($scope, $http) {
-    $scope.title = '全部';
+    $scope.title = '最近';
     $scope.route = 'topic-all';
     $http.get('https://www.v2ex.com/api/topics/latest.json').then(function(resp) {
         $scope.topics = resp['data'];
@@ -32,7 +32,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('TechCtrl', function($scope, $http) {
-    $scope.title = '科技';
+    $scope.title = '技术';
     $scope.route = 'topic-tech';
     $http.get('https://v2ex.com/api/topics/show.json?node_name=tech').then(function(resp) {
         $scope.topics = resp['data'];
