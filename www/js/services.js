@@ -1,50 +1,50 @@
 angular.module('starter.services', [])
 
-.factory('Topics', function() {
+.factory('Topics', function($http) {
     // Might use a resource here that returns a JSON array
 
     // Some fake testing data
-    var topics = [{
-        id: 0,
-        name: 'Ben Sparrow',
-        lastText: 'You on your way?',
-        face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
-    }, {
-        id: 1,
-        name: 'Max Lynx',
-        lastText: 'Hey, it\'s me',
-        face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
-    }, {
-        id: 2,
-        name: 'Andrew Jostlin',
-        lastText: 'Did you get the ice cream?',
-        face: 'https://pbs.twimg.com/profile_images/491274378181488640/Tti0fFVJ.jpeg'
-    }, {
-        id: 3,
-        name: 'Adam Bradleyson',
-        lastText: 'I should buy a boat',
-        face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
-    }, {
-        id: 4,
-        name: 'Perry Governor',
-        lastText: 'Look at my mukluks!',
-        face: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg'
-    }];
+    var topics = [];
 
     return {
-        all: function() {
-            return topics;
+        latest: function() {
+            return $http.get('/api/topics/latest.json').then(function(resp) {
+                        topics = resp['data'];
+                        console.log(JSON.stringify(resp));
+                        return topics;
+                    }, function(err) {
+                        console.error('ERR', JSON.stringify(err));
+                        return null;
+                    });
         },
-        remove: function(topic) {
-            topics.splice(chats.indexOf(topic), 1);
+        hot: function() {
+            return $http.get('/api/topics/hot.json').then(function(resp) {
+                        topics = resp['data'];
+                        console.log(JSON.stringify(resp));
+                        return topics;
+                    }, function(err) {
+                        console.error('ERR', JSON.stringify(err));
+                        return null;
+                    });
         },
-        get: function(topicId) {
-            for (var i = 0; i < topics.length; i++) {
-                if (topics[i].id === parseInt(topicId)) {
-                    return topics[i];
-                }
-            }
-            return null;
+        tech: function() {
+            return $http.get('/api/topics/show.json?node_name=tech').then(function(resp) {
+                        topics = resp['data'];
+                        console.log(JSON.stringify(resp));
+                        return topics;
+                    }, function(err) {
+                        console.error('ERR', JSON.stringify(err));
+                        return null;
+                    });
+        },
+        detail: function(topicId) {
+            return $http.get('/api/topics/show.json?id='+topicId).then(function(resp) {
+                        console.log(JSON.stringify(resp));
+                        return resp['data'][0];
+                    }, function(err) {
+                        console.error('ERR', JSON.stringify(err));
+                        return null;
+                    });
         }
     };
 });
