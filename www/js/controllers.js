@@ -1,5 +1,20 @@
 angular.module('starter.controllers', [])
 
+.filter('externalLinks', function() {
+   return function(text) {
+     if (!text) {
+        return text;
+     }
+     return String(text).replace(/href=/gm, "onclick=\"angular.element(this).scope().exLink(this);return false\" href=");
+   }
+ })
+
+.filter('toTrusted', ['$sce', function($sce){
+    return function(text) {
+        return $sce.trustAsHtml(text);
+    };
+}])
+
 .controller('AllCtrl', function($scope, Topics) {
     $scope.title = '最近';
     $scope.route = 'topic-all';
@@ -17,6 +32,10 @@ angular.module('starter.controllers', [])
 })
 
 .controller('TopicDetailCtrl', function($scope, $stateParams, Topics) {
+    $scope.exLink = function(link){
+            var url = link.href;
+            window.open(encodeURI(url), '_blank', 'location=no');
+        };
     Topics.detail($stateParams.topicId).then(function(topic){
         $scope.topic = topic;
     });
