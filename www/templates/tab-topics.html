@@ -1,0 +1,16 @@
+<ion-view view-title="{{title}}">
+    <ion-content class="padding">
+        <ion-list>
+            <ion-item class="item item-avatar" ng-repeat="topic in topics" href="#tab/{{route}}/{{topic.id}}">
+                <img ng-src="http:{{topic.member.avatar_normal}}">
+                <div>
+                    <div>{{topic.title}}</div>
+                    <div>
+                        <strong>{{topic.node.title}}</strong>
+                        <strong>{{topic.member.username}}</strong>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
